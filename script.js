@@ -6,17 +6,6 @@ function converStringToNumber(id){
     return covertedNumber;
 }
 
-// Blogs button in/back
-
-document.getElementById('go-to-blogs').addEventListener('click', function(){
-    window.location.href = 'blogs.html'
-})
-
-document.getElementById('back-to-desk').addEventListener('click', function(){
-    console.log('clicked')
-    // window.location.href = 'index.html'
-})
-
 
 // task complete btn 
 
@@ -52,3 +41,17 @@ const allCompleteButtons = document.querySelectorAll('.complete-btn');
 
         })
     }
+
+
+
+
+// Blogs button in/back
+
+document.getElementById('go-to-blogs').addEventListener('click', function(){
+    window.location.href = 'blogs.html'
+})
+
+// document.getElementById('back-to-desk').addEventListener('click', function(){
+
+//     window.location.href = 'index.html'
+// })
