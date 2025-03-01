@@ -59,7 +59,41 @@ document.getElementById('clear-history').addEventListener('click', function (){
 })
 
 
-// 
+// Change Background color Randomly
+
+document.getElementById('color-btn').addEventListener('click', function(){
+    const colorCode = Math.floor(Math.random()*10);
+    if(colorCode === 1){
+        document.getElementById('full-body').style.backgroundColor = '#ff9999'
+    }
+    else if(colorCode === 2){
+        document.getElementById('full-body').style.backgroundColor = '#ff99e9'
+    }
+    else if(colorCode === 3){
+        document.getElementById('full-body').style.backgroundColor = '#df99ff'
+    }
+    else if(colorCode === 4){
+        document.getElementById('full-body').style.backgroundColor = '#bd99ff'
+    }
+    else if(colorCode === 5){
+        document.getElementById('full-body').style.backgroundColor = '#99c0ff'
+    }
+    else if(colorCode === 6){
+        document.getElementById('full-body').style.backgroundColor = '#99ffdd'
+    }
+    else if(colorCode === 7){
+        document.getElementById('full-body').style.backgroundColor = '#99ff9b'
+    }
+    else if(colorCode === 8){
+        document.getElementById('full-body').style.backgroundColor = '#d1ff99'
+    }
+    else if(colorCode === 9){
+        document.getElementById('full-body').style.backgroundColor = '#ffe499'
+    }
+    else{
+        document.getElementById('full-body').style.backgroundColor = '#ffb399'
+    }
+})
 
 
 
