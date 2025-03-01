@@ -96,5 +96,19 @@ document.getElementById('color-btn').addEventListener('click', function(){
 })
 
 
+// Get current Date
+const weekday = ['Sun','Mon','Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+const fullDate = new Date();
+let day = fullDate.getDay();
+document.getElementById('day-name').innerHTML = weekday[day]
 
+const monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+let month = fullDate.getMonth();
+document.getElementById('month-name').innerHTML = monthName[month];
+
+let date = fullDate.getDate();
+document.getElementById('today-date').innerHTML = date;
+
+let fullYear = fullDate.getFullYear();
+document.getElementById('current-year').innerHTML = fullYear;
 
