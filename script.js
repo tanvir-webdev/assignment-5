@@ -6,6 +6,17 @@ function converStringToNumber(id){
     return covertedNumber;
 }
 
+// Blogs button in/back
+
+document.getElementById('go-to-blogs').addEventListener('click', function(){
+    window.location.href = 'blogs.html'
+})
+
+document.getElementById('back-to-desk').addEventListener('click', function(){
+    console.log('clicked')
+    // window.location.href = 'index.html'
+})
+
 
 // task complete btn 
 
@@ -30,7 +41,7 @@ const allCompleteButtons = document.querySelectorAll('.complete-btn');
             const history = document.getElementById('history');
             const p = document.createElement('p')
             const taskTitle = allCompleteButton.parentElement.parentElement.parentElement.childNodes[3].innerText;
-            p.innerText = `You have Complete The Task ${taskTitle}` 
+            p.innerText = `You have Complete The Task ${taskTitle} at` 
             p.className = 'mb-7 p-3 bg-[#F4F7FF] rounded-lg'
             history.appendChild(p)
 
