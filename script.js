@@ -6,6 +6,13 @@ function converStringToNumber(id){
     return covertedNumber;
 }
 
+// Blogs button in/back
+
+document.getElementById('go-to-blogs').addEventListener('click', function(){
+    window.location.href = 'blogs.html'
+})
+
+
 
 // task complete btn 
 
@@ -42,16 +49,18 @@ const allCompleteButtons = document.querySelectorAll('.complete-btn');
         })
     }
 
+// Clear History btn 
 
-
-
-// Blogs button in/back
-
-document.getElementById('go-to-blogs').addEventListener('click', function(){
-    window.location.href = 'blogs.html'
+document.getElementById('clear-history').addEventListener('click', function (){
+    const historyelements = document.querySelectorAll('#history p')
+        for(let historyelement of historyelements){
+            historyelement.classList.add('hidden')
+        }
 })
 
-// document.getElementById('back-to-desk').addEventListener('click', function(){
 
-//     window.location.href = 'index.html'
-// })
+// 
+
+
+
+
