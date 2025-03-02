@@ -17,6 +17,7 @@ document.getElementById('go-to-blogs').addEventListener('click', function(){
 // task complete btn 
 
 const allCompleteButtons = document.querySelectorAll('.complete-btn');
+    
     for(let allCompleteButton of allCompleteButtons){
         allCompleteButton.addEventListener('click', function(event){
             alert('Board Updated Successfully')
@@ -32,12 +33,13 @@ const allCompleteButtons = document.querySelectorAll('.complete-btn');
             // Disable btn
             event.target.disabled = true;
 
-            // Add History
-
+            // Add History with real time
+            const realTime = new Date();
+            let clickTime = realTime.toLocaleTimeString();
             const history = document.getElementById('history');
             const p = document.createElement('p')
             const taskTitle = allCompleteButton.parentElement.parentElement.parentElement.childNodes[3].innerText;
-            p.innerText = `You have Complete The Task ${taskTitle} at` 
+            p.innerText = `You have Complete The Task ${taskTitle} at ${clickTime}` 
             p.className = 'mb-7 p-3 bg-[#F4F7FF] rounded-lg'
             history.appendChild(p)
 
@@ -97,7 +99,7 @@ document.getElementById('color-btn').addEventListener('click', function(){
 
 
 // Get current Date
-const weekday = ['Sun','Mon','Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+const weekday = ['Sun,','Mon,','Tue,', 'Wed,', 'Thu,', 'Fri,', 'Sat,']
 const fullDate = new Date();
 let day = fullDate.getDay();
 document.getElementById('day-name').innerHTML = weekday[day]
