@@ -54,10 +54,7 @@ const allCompleteButtons = document.querySelectorAll('.complete-btn');
 // Clear History btn 
 
 document.getElementById('clear-history').addEventListener('click', function (){
-    const historyelements = document.querySelectorAll('#history p')
-        for(let historyelement of historyelements){
-            historyelement.classList.add('hidden')
-        }
+    document.getElementById('history').innerHTML = '';
 })
 
 
