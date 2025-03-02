@@ -17,7 +17,7 @@ document.getElementById('go-to-blogs').addEventListener('click', function(){
 // task complete btn 
 
 const allCompleteButtons = document.querySelectorAll('.complete-btn');
-    
+    let countClick = 0;
     for(let allCompleteButton of allCompleteButtons){
         allCompleteButton.addEventListener('click', function(event){
             alert('Board Updated Successfully')
@@ -42,12 +42,13 @@ const allCompleteButtons = document.querySelectorAll('.complete-btn');
             p.innerText = `You have Complete The Task ${taskTitle} at ${clickTime}` 
             p.className = 'mb-7 p-3 bg-[#F4F7FF] rounded-lg'
             history.appendChild(p)
-
-            
-
-
-            
-
+           
+            // Add Extra Alert
+            const allTask = allCompleteButtons.length;
+            countClick = countClick + 1;
+            if(countClick === allTask){
+                alert('Congrates!!! You have completed all current task')
+            }
         })
     }
 
